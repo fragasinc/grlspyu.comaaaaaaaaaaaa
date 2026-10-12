@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-lvl="4">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>grlspyu.com</title>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600;700&family=Pacifico&display=swap" rel="stylesheet">
+<style>
+:root{--red:#c4170c;--pink:#ff2d95;--lil:#b36bff;--sky:#7fd8ff;--gold:#ffd86b;--ink:#2a1233;--bg:#ffe3f3;--card:#fff;--t:1;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--ink:#fbe7ff;--bg:#1d0b2b;--card:#2c1442}}
+:root[data-theme="dark"]{--ink:#fbe7ff;--bg:#1d0b2b;--card:#2c1442}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}
+html[data-lvl="1"]{--t:1}html[data-lvl="2"]{--t:2.4}html[data-lvl="3"]{--t:1.5}html[data-lvl="4"]{--t:1}html[data-lvl="5"]{--t:.55}
+html[data-lvl="1"] *{animation:none!important;transition:none!important}
+html[data-lvl="1"] .pre{opacity:1!important;--ty:0px!important}
+body{margin:0;font-family:Fredoka,"Trebuchet MS",sans-serif;color:var(--ink);background:radial-gradient(circle at 15% 10%,#ff9fd4aa,transparent 40%),radial-gradient(circle at 85% 30%,#b36bff66,transparent 45%),radial-gradient(circle at 40% 90%,#7fd8ff66,transparent 45%),var(--bg);background-attachment:fixed;overflow-x:hidden}
+#fx{position:fixed;inset:0;width:100%;height:100%;pointer-events:none;z-index:50}
+.tick{display:flex;background:var(--red);color:#fff;font-weight:700;overflow:hidden;border-bottom:3px solid #8e0f07}
+.tick b{background:#8e0f07;padding:8px 14px;white-space:nowrap;z-index:1;letter-spacing:.5px}
+.rail{flex:1;overflow:hidden;white-space:nowrap;display:flex;align-items:center}
+.rail span{display:inline-block;padding-left:100%;animation:mq calc(70s*var(--t)) linear infinite}
+@keyframes mq{to{transform:translateX(-100%)}}
+header{text-align:center;padding:26px 14px 14px;background:linear-gradient(#fff,#fff0fa);border-bottom:6px solid var(--pink);position:relative}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) header{background:linear-gradient(#2c1442,#1d0b2b)}}
+:root[data-theme="dark"] header{background:linear-gradient(#2c1442,#1d0b2b)}
+.logo{margin:0;position:relative;display:inline-block;line-height:1.15;font-weight:400}
+.glt{font-family:Pacifico,cursive;font-size:clamp(3.2rem,14vw,7rem);color:transparent;background:radial-gradient(circle at 20% 30%,#fff 0 1.6px,transparent 2.2px) 0 0/22px 22px,radial-gradient(circle at 70% 60%,#fff 0 1.3px,transparent 2px) 0 0/17px 17px,radial-gradient(circle at 50% 50%,#fff8 0 1px,transparent 1.6px) 0 0/11px 13px,linear-gradient(100deg,#ff2d95,#ffd86b,#b36bff,#7fd8ff,#ff2d95) 0 0/600px 100%;-webkit-background-clip:text;background-clip:text;filter:drop-shadow(0 0 10px #ff2d95aa) drop-shadow(0 2px 0 #fff8);animation:shine calc(5s*var(--t)) linear infinite,glow calc(2.4s*var(--t)) ease-in-out infinite alternate}
+@keyframes shine{from{background-position:0 0,0 0,0 0,0 0}to{background-position:44px 44px,-34px 34px,22px -26px,600px 0}}
+@keyframes glow{to{filter:drop-shadow(0 0 22px #ffd86b) drop-shadow(0 2px 0 #fff8)}}
+.com{font-weight:700;font-size:clamp(1.3rem,5vw,2.4rem);color:var(--red)}
+.sp{position:absolute;color:var(--gold);pointer-events:none;text-shadow:0 0 8px #fff;animation:tw calc(1.8s*var(--t)) ease-in-out infinite}
+@keyframes tw{0%,100%{opacity:0;transform:scale(.2) rotate(0)}50%{opacity:1;transform:scale(1.2) rotate(90deg)}}
+.slogan{margin:6px 0 0;font-weight:600;font-size:clamp(1rem,3.6vw,1.45rem);color:var(--pink)}
+.slogan i{font-style:normal;display:inline-block;animation:bl calc(3.2s*var(--t)) infinite}
+@keyframes bl{0%,90%,100%{transform:scaleY(1)}95%{transform:scaleY(.1)}}
+.set{display:flex;flex-wrap:wrap;gap:10px 18px;justify-content:center;align-items:center;margin-top:16px;font-size:.95rem}
+.set label{font-weight:700}
+.lg button{font:inherit;font-weight:700;border:2px solid var(--pink);border-radius:20px;padding:5px 13px;margin:2px;cursor:pointer;color:var(--ink);background:linear-gradient(#fff,#ffd3ec);transition:transform calc(.25s*var(--t)),box-shadow calc(.25s*var(--t))}
+.lg button:hover{transform:translateY(-2px) scale(1.06);box-shadow:0 4px 12px #ff2d9566}
+.lg button[aria-pressed="true"]{background:linear-gradient(#ff7cc2,var(--pink));color:#fff;box-shadow:inset 0 2px 0 #fff8}
+select{font:inherit;font-weight:600;padding:6px 10px;border-radius:14px;border:2px solid var(--lil);background:var(--card);color:var(--ink)}
+button:focus-visible,select:focus-visible{outline:3px solid var(--sky);outline-offset:2px}
+.note{margin:10px 0 0;font-size:.85rem;opacity:.8}
+main{max-width:1180px;margin:0 auto;padding:26px 14px 10px}
+.grid{display:grid;align-items:start;grid-template-columns:repeat(auto-fill,minmax(min(100%,310px),1fr));gap:20px}
+.card{background:var(--card);border:3px solid var(--pink);border-radius:22px 22px 22px 6px;padding:0 0 16px;overflow:hidden;position:relative;transform:perspective(700px) translateY(var(--ty,0px)) rotateX(var(--rx,0deg)) rotateY(var(--ry,0deg));transition:transform calc(.7s*var(--t)) cubic-bezier(.2,.8,.2,1),opacity calc(.7s*var(--t)),box-shadow calc(.3s*var(--t));box-shadow:5px 5px 0 var(--lil)}
+.card.pre{opacity:0;--ty:30px}
+.card.pre.in{opacity:1;--ty:0px}
+.card:hover{box-shadow:8px 8px 0 var(--gold),0 0 24px #ff2d9566}
+.card .n{position:absolute;top:10px;right:10px;background:linear-gradient(#ff7cc2,var(--pink));color:#fff;font-weight:700;border-radius:50%;width:40px;height:40px;display:grid;place-items:center;box-shadow:inset 0 2px 0 #fff9,0 2px 6px #0003}
+.card .in-b{padding:16px 18px 0}
+.tag{color:var(--red);font-weight:700;font-size:.95rem;letter-spacing:.4px;padding-right:48px;text-transform:uppercase}
+.card h2{margin:6px 0 10px;font-size:1.4rem;line-height:1.2;border-bottom:2px dotted var(--lil);padding-bottom:10px}
+.card p{margin:0 0 10px;line-height:1.5;max-width:60ch}
+.card p.q{font-weight:600;border-left:4px solid var(--pink);padding-left:10px;color:var(--lil)}
+.hd{display:block;width:100%;text-align:left;font:inherit;color:inherit;background:none;border:0;margin:0;padding:16px 52px 4px 18px;cursor:pointer;position:relative}
+.hd .tag{display:block;padding-right:0}
+.hd .h2{display:block;margin:6px 0 0;font-size:1.4rem;font-weight:700;line-height:1.25;padding-bottom:10px;border-bottom:2px dotted transparent;transition:border-color calc(.4s*var(--t))}
+.chev{position:absolute;right:16px;bottom:18px;width:30px;height:30px;border-radius:50%;display:grid;place-items:center;color:#fff;background:linear-gradient(#b98bff,var(--lil));box-shadow:inset 0 2px 0 #fff8;transition:transform calc(.5s*var(--t)) cubic-bezier(.2,.8,.2,1)}
+.card.open .chev{transform:rotate(180deg)}
+.card.open .h2{border-bottom-color:var(--lil)}
+.hd:hover .h2{color:var(--pink)}
+.hd:focus-visible{outline:3px solid var(--sky);outline-offset:-3px;border-radius:18px}
+.bd{display:grid;grid-template-rows:0fr;opacity:0;transition:grid-template-rows calc(.55s*var(--t)) cubic-bezier(.2,.8,.2,1),opacity calc(.45s*var(--t))}
+.card.open .bd{grid-template-rows:1fr;opacity:1}
+.bd-in{overflow:hidden;min-height:0;padding:0 18px}
+.bd-in>p:first-child{margin-top:12px}
+.se{margin:34px auto 10px;max-width:820px;text-align:center;padding:30px 22px;border-radius:30px;color:#fff;background:linear-gradient(135deg,#3a0f5c,#c4170c 140%);border:4px solid var(--gold);box-shadow:0 0 30px #b36bff88;position:relative;overflow:hidden}
+.se h2{margin:0 0 12px;font-family:Pacifico,cursive;font-weight:400;font-size:clamp(1.7rem,6vw,2.6rem);color:var(--gold);text-shadow:0 0 12px #ff2d95}
+.se .eye{font-size:2.6rem;display:inline-block;animation:pu calc(2.4s*var(--t)) ease-in-out infinite}
+@keyframes pu{50%{transform:scale(1.25)}}
+.se blockquote{margin:0;font-size:1.15rem;line-height:1.55}
+.se .sig{margin-top:16px;font-weight:700;color:#ffd3ec}
+footer{text-align:center;padding:20px 14px 40px;font-size:.85rem;opacity:.8}
+</style>
+</head>
+<body>
+<canvas id="fx"></canvas>
+<div class="tick"><b id="last"></b><div class="rail"><span id="rail"></span></div></div>
+<header>
+  <h1 class="logo"><span class="glt">grlspyu</span><span class="com">.com</span></h1>
+  <p class="slogan"><span id="slogan"></span> <i>👁️</i></p>
+  <div class="set">
+    <div class="lg" role="group" aria-label="Idioma"><label id="llang"></label>
+      <button data-l="pt">PT</button><button data-l="en">EN</button><button data-l="es">ES</button><button data-l="de">DE</button>
+    </div>
+    <div><label for="lv" id="lanim"></label> <select id="lv"></select></div>
+  </div>
+</header>
+<main>
+  <div class="grid" id="grid"></div>
+  <section class="se">
+    <span class="eye">👁️</span>
+    <h2>Secret Eyes says…</h2>
+    <blockquote id="quote"></blockquote>
+    <div class="sig" id="sig"></div>
+  </section>
+</main>
+<footer id="foot"></footer>
+<script>
+const I={
+pt:{slogan:"Estamos de olho em você mais do que você...",last:"ÚLTIMAS",lang:"Idioma",anim:"Fluidez das animações",lv:["Extra leve","Leve","Médio","Fluido extremo","Ultra fluido"],note:"",
+q:"“Nem todo sorriso é uma confissão, nem toda indireta tem destinatário e nem todo segredo precisa ser revelado. Mas uma coisa é certa: a próxima história pode mudar tudo.”",sig:"💋 Girls Spy — Observamos tudo. Revelamos só o necessário.",foot:"Conteúdo de entretenimento. © grlspyu.com"},
+en:{slogan:"We're keeping an eye on you more than you...",last:"LATEST",lang:"Language",anim:"Animation smoothness",lv:["Extra light","Light","Medium","Extreme smooth","Ultra smooth"],note:"Full gossip texts are available in Portuguese only.",
+q:"“Not every smile is a confession, not every hint has a target, and not every secret needs to be revealed. But one thing is certain: the next story could change everything.”",sig:"💋 Girls Spy — We watch everything. We reveal only what's necessary.",foot:"Entertainment content. © grlspyu.com"},
+es:{slogan:"Te vigilamos más de lo que tú...",last:"ÚLTIMAS",lang:"Idioma",anim:"Fluidez de animaciones",lv:["Extra ligero","Ligero","Medio","Fluido extremo","Ultra fluido"],note:"Los textos completos de los chismes solo están en portugués.",
+q:"“No toda sonrisa es una confesión, no toda indirecta tiene destinatario y no todo secreto necesita ser revelado. Pero algo es seguro: la próxima historia puede cambiarlo todo.”",sig:"💋 Girls Spy — Lo observamos todo. Revelamos solo lo necesario.",foot:"Contenido de entretenimiento. © grlspyu.com"},
+de:{slogan:"Wir beobachten dich mehr als du...",last:"NEU",lang:"Sprache",anim:"Animationsflüssigkeit",lv:["Extra leicht","Leicht","Mittel","Extrem flüssig","Ultra flüssig"],note:"Die vollständigen Klatschtexte gibt es nur auf Portugiesisch.",
+q:"„Nicht jedes Lächeln ist ein Geständnis, nicht jede Andeutung hat einen Adressaten und nicht jedes Geheimnis muss gelüftet werden. Aber eines ist sicher: Die nächste Geschichte kann alles verändern.“",sig:"💋 Girls Spy — Wir beobachten alles. Wir verraten nur das Nötige.",foot:"Unterhaltungsinhalt. © grlspyu.com"}
+};
+/* [tags pt|en|es|de, manchetes pt|en|es|de, emoji, texto] */
+const S=[
+["CRUSH ALERT|CRUSH ALERT|CRUSH ALERT|CRUSH ALERT","O ranço virou romance?|Did the hate turn into romance?|¿El rechazo se volvió romance?|Wurde aus Abneigung Romantik?","💋","Fontes “super confiáveis” garantem que Theo e Luna foram vistos de mãos dadas atrás do ginásio. Quem viu jura que ele, o metido de sempre, nem disfarçou.\nDizem que o convencido finalmente achou alguém tão exibida quanto ele.|“Super reliable” sources swear Theo and Luna were seen holding hands behind the gym. Witnesses say he, the usual show-off, didn't even try to hide it.\nThey say the conceited one finally found someone as full of herself as he is.|Fuentes «súper confiables» aseguran que Theo y Luna fueron vistos de la mano detrás del gimnasio. Quien los vio jura que él, el creído de siempre, ni lo disimuló.\nDicen que el engreído por fin encontró a alguien tan presumida como él.|„Total zuverlässige“ Quellen versichern, Theo und Luna seien Hand in Hand hinter der Turnhalle gesehen worden. Augenzeugen schwören, dass er, der übliche Angeber, es nicht mal versteckt hat.\nAngeblich hat der Eingebildete endlich jemanden gefunden, der genauso eingebildet ist wie er."],
+["MENSAGENS SECRETAS|SECRET MESSAGES|MENSAJES SECRETOS|GEHEIME NACHRICHTEN","Digitando… apagando… digitando de novo|Typing… deleting… typing again|Escribiendo… borrando… escribiendo otra vez|Tippt… löscht… tippt wieder","📱","Urgente: a Bia passou o intervalo digitando, apagando e digitando de novo, e escondeu a tela como se fosse segredo de Estado. Dizem que a mensagem era para o ex da Mel, aquele bobão.\nSe for verdade, a enxerida mais falsa da escola acabou de se entregar.|Breaking: Bia spent the whole break typing, deleting and typing again, hiding her screen like a state secret. They say the message was for Mel's ex, that goofball.\nIf true, the school's fakest busybody just gave herself away.|Urgente: Bia pasó el recreo escribiendo, borrando y escribiendo otra vez, escondiendo la pantalla como si fuera secreto de Estado. Dicen que el mensaje era para el ex de Mel, ese bobo.\nSi es verdad, la entrometida más falsa del colegio acaba de delatarse.|Eilmeldung: Bia hat die ganze Pause getippt, gelöscht und wieder getippt und ihren Bildschirm wie ein Staatsgeheimnis versteckt. Angeblich ging die Nachricht an Mels Ex, diesen Trottel.\nWenn das stimmt, hat sich die falscheste Wichtigtuerin der Schule gerade selbst verraten."],
+["FRIENDSHIP DRAMA|FRIENDSHIP DRAMA|FRIENDSHIP DRAMA|FRIENDSHIP DRAMA","Melhores amigas ou ex-melhores amigas?|Best friends or ex-best friends?|¿Mejores amigas o ex mejores amigas?|Beste Freundinnen oder Ex-Freundinnen?","🫢","Luna e Mel não se falam mais, e a culpa seria de um boato que a Mel espalhou: que a Luna cola em todas as provas. Quem conhece a Mel sabe que ela é invejosa desde o jardim de infância.\nA Luna já avisou que não vai ficar quieta.|Luna and Mel aren't speaking anymore, supposedly because Mel spread a rumor that Luna cheats on every test. Anyone who knows Mel knows she's been jealous since kindergarten.\nLuna has already said she won't stay quiet.|Luna y Mel ya no se hablan, supuestamente porque Mel difundió el rumor de que Luna copia en todos los exámenes. Quien conoce a Mel sabe que es envidiosa desde el jardín de infancia.\nLuna ya avisó que no se va a quedar callada.|Luna und Mel reden nicht mehr miteinander, angeblich weil Mel das Gerücht verbreitet hat, Luna schreibe in jeder Klausur ab. Wer Mel kennt, weiß, dass sie seit dem Kindergarten neidisch ist.\nLuna hat schon gesagt, dass sie nicht schweigen wird."],
+["CONFISSÃO ANÔNIMA|ANONYMOUS CONFESSION|CONFESIÓN ANÓNIMA|ANONYMES GESTÄNDNIS","Uma declaração e zero pistas|One confession and zero clues|Una declaración y cero pistas|Ein Geständnis, null Hinweise","💌","Apareceu um bilhete num livro da biblioteca: “Eu gosto de você há mais tempo do que imagina”. Boatos dizem que foi o Caio, mas ninguém acredita que aquele cabeça-oca teria coragem.\nOutros garantem que foi a Jade, a mais atrevida e boca grande da turma, para variar.|A note turned up in a library book: “I've liked you for longer than you think.” Rumor says it was Caio, but nobody believes that airhead would have the guts.\nOthers swear it was Jade, the boldest loudmouth in class, as usual.|Apareció una nota en un libro de la biblioteca: «Me gustas desde hace más tiempo del que imaginas». Los rumores dicen que fue Caio, pero nadie cree que ese cabeza hueca tenga agallas.\nOtros aseguran que fue Jade, la más atrevida y bocona de la clase, como siempre.|In einem Bibliotheksbuch tauchte ein Zettel auf: „Ich mag dich schon länger, als du denkst.“ Gerüchten zufolge war es Caio, aber niemand glaubt, dass dieser Hohlkopf den Mut hätte.\nAndere schwören, es war Jade, wie immer das frechste Großmaul der Klasse."],
+["FASHION SPY|FASHION SPY|FASHION SPY|FASHION SPY","Quem copiou o estilo de quem?|Who copied whose style?|¿Quién copió el estilo de quién?|Wer hat wessen Stil kopiert?","👛","A Jade apareceu com um visual novo e, dois dias depois, a Duda chegou com tudo igualzinho. A Jade garante que foi cópia descarada; a Duda diz que a outra não inventa moda desde 2019.\nQuem tem razão? Dizem que nenhuma das duas sabe combinar nem meia.|Jade showed up with a new look and two days later Duda arrived with the exact same thing. Jade swears it was shameless copying; Duda says the other hasn't invented a trend since 2019.\nWho's right? They say neither of them can match a pair of socks.|Jade llegó con un look nuevo y dos días después Duda apareció con lo mismo. Jade jura que fue una copia descarada; Duda dice que la otra no inventa moda desde 2019.\n¿Quién tiene razón? Dicen que ninguna de las dos sabe combinar ni un par de calcetines.|Jade tauchte mit einem neuen Look auf und zwei Tage später kam Duda mit exakt demselben. Jade schwört, es sei dreiste Abschreiberei; Duda sagt, die andere habe seit 2019 keinen Trend mehr gesetzt.\nWer hat recht? Angeblich kann keine von beiden ein Paar Socken kombinieren."],
+["FLAGRA SUSPEITO|SUSPICIOUS SIGHTING|AVISTAMIENTO SOSPECHOSO|VERDÄCHTIGE BEOBACHTUNG","O encontro que terminou cedo demais|The meeting that ended too soon|El encuentro que terminó demasiado pronto|Das Treffen, das zu früh endete","👀","Boatos garantem que Pedro e Lara foram flagrados na biblioteca rindo juntos, e quando os amigos chegaram o papo morreu na hora. Alguns dizem que ele só estava copiando o trabalho dela, aquele folgado.\nOutros juram que é mais uma mentira inventada pela turma do fundo.|Rumors say Pedro and Lara were caught laughing together in the library, and when their friends showed up the conversation died instantly. Some say he was just copying her homework, that freeloader.\nOthers swear it's yet another lie made up by the back-row crowd.|Los rumores dicen que Pedro y Lara fueron sorprendidos riendo juntos en la biblioteca, y cuando llegaron los amigos la charla murió al instante. Algunos dicen que él solo copiaba su tarea, ese aprovechado.\nOtros juran que es otra mentira inventada por los del fondo.|Gerüchten zufolge wurden Pedro und Lara lachend in der Bibliothek erwischt, und als die Freunde kamen, war das Gespräch sofort tot. Manche sagen, er habe nur ihre Hausaufgaben abgeschrieben, dieser Schmarotzer.\nAndere schwören, das sei nur eine weitere Lüge der Leute aus der letzten Reihe."],
+["STORY SUSPEITO|SUSPICIOUS STORY|STORY SOSPECHOSA|VERDÄCHTIGE STORY","A indireta teve destinatário?|Was the hint meant for someone?|¿La indirecta tenía destinatario?|Hatte die Andeutung einen Adressaten?","🎯","A Duda postou: “Tem gente que só lembra de você quando precisa”. Vinte minutos depois: “Ainda bem que aprendi a reconhecer gente falsa”. Ninguém foi marcado, mas dizem que era para a Jade, aquela puxa-saco.\nA Jade respondeu com um story cheio de risadinhas. A guerra das indiretas começou.|Duda posted: “Some people only remember you when they need something.” Twenty minutes later: “Glad I learned to spot fake people.” Nobody was tagged, but they say it was for Jade, that brown-noser.\nJade answered with a giggling story. The war of hints has begun.|Duda publicó: «Hay gente que solo se acuerda de ti cuando te necesita». Veinte minutos después: «Menos mal que aprendí a reconocer a la gente falsa». No etiquetó a nadie, pero dicen que era para Jade, esa adulona.\nJade respondió con una story llena de risitas. La guerra de indirectas ha comenzado.|Duda postete: „Manche Leute erinnern sich nur an dich, wenn sie etwas brauchen.“ Zwanzig Minuten später: „Gut, dass ich gelernt habe, falsche Leute zu erkennen.“ Niemand wurde markiert, aber angeblich war es für Jade, diese Schleimerin.\nJade antwortete mit einer kichernden Story. Der Krieg der Andeutungen hat begonnen."],
+["DUPLA IMPROVÁVEL|UNLIKELY DUO|DÚO IMPROBABLE|UNGLEICHES DUO","O trabalho escolar que aproximou demais|The school project that brought them too close|El trabajo escolar que los acercó demasiado|Das Schulprojekt, das sie zu sehr zusammenbrachte","🤝","Theo e Bia foram sorteados para fazer o trabalho juntos e, segundo fontes, já brigaram quatro vezes só para escolher o tema. Ele diz que ela é mandona; ela diz que ele é um preguiçoso sem noção.\nMesmo assim, dizem que os dois não param de trocar mensagens até de madrugada.|Theo and Bia were paired up for a project and, according to sources, have already fought four times just to pick a topic. He says she's bossy; she says he's a clueless slacker.\nStill, they say the two keep texting each other until the early hours.|Theo y Bia fueron sorteados para hacer el trabajo juntos y, según fuentes, ya pelearon cuatro veces solo para elegir el tema. Él dice que ella es mandona; ella dice que él es un vago sin remedio.\nAun así, dicen que los dos no paran de escribirse hasta la madrugada.|Theo und Bia wurden für ein Projekt zusammengelost und haben sich laut Quellen schon viermal gestritten, nur um ein Thema zu wählen. Er sagt, sie sei herrisch; sie sagt, er sei ein ahnungsloser Faulpelz.\nTrotzdem schreiben die beiden sich angeblich bis tief in die Nacht."],
+["SEGREDO REVELADO?|SECRET REVEALED?|¿SECRETO REVELADO?|GEHEIMNIS GELÜFTET?","Quase escapou!|It almost slipped out!|¡Casi se le escapa!|Fast verplappert!","🤫","Alguém ouviu a Lara cochichar: “Não conta pra ninguém, mas a gente está planejando…”. A frase foi cortada quando a Mel, a maior linguaruda da escola, chegou.\nAgora circulam três versões: festa surpresa, protesto contra a cantina ou, claro, mais uma mentira da Lara.|Someone overheard Lara whispering: “Don't tell anyone, but we're planning…” The sentence was cut off when Mel, the biggest blabbermouth in school, walked in.\nNow three versions are going around: a surprise party, a protest against the cafeteria, or, of course, yet another lie from Lara.|Alguien oyó a Lara susurrar: «No se lo cuentes a nadie, pero estamos planeando…». La frase se cortó cuando llegó Mel, la más chismosa del colegio.\nAhora circulan tres versiones: fiesta sorpresa, protesta contra la cantina o, claro, otra mentira de Lara.|Jemand hörte Lara flüstern: „Sag es niemandem, aber wir planen…“ Der Satz brach ab, als Mel, die größte Klatschtante der Schule, hereinkam.\nJetzt kursieren drei Versionen: eine Überraschungsparty, ein Protest gegen die Kantine oder natürlich wieder eine Lüge von Lara."],
+["CIÚMES DETECTADOS|JEALOUSY DETECTED|CELOS DETECTADOS|EIFERSUCHT ENTDECKT","Quem disse que não se importava?|Who said she didn't care?|¿Quién dijo que no le importaba?|Wer sagte, es sei ihr egal?","💅","A Lara jurou que não ligava para o Pedro, mas bastou ele rir com a Duda para ela virar uma pedra de gelo. Dizem que ela rasgou um bilhete em mil pedaços no banheiro.\nSem ciúmes? Até a moça da cantina percebeu que a Lara é a pior mentirosa da escola.|Lara swore she didn't care about Pedro, but as soon as he laughed with Duda she turned to ice. They say she tore a note into a thousand pieces in the bathroom.\nNo jealousy? Even the lunch lady noticed Lara is the worst liar in school.|Lara juró que no le importaba Pedro, pero bastó verlo reír con Duda para que se volviera de hielo. Dicen que rompió una nota en mil pedazos en el baño.\n¿Sin celos? Hasta la cocinera notó que Lara es la peor mentirosa del colegio.|Lara schwor, Pedro sei ihr egal, doch kaum lachte er mit Duda, wurde sie zu Eis. Angeblich hat sie auf der Toilette einen Zettel in tausend Stücke gerissen.\nKeine Eifersucht? Sogar die Kantinenfrau hat bemerkt, dass Lara die schlechteste Lügnerin der Schule ist."],
+["PLAYLIST SUSPEITA|SUSPICIOUS PLAYLIST|PLAYLIST SOSPECHOSA|VERDÄCHTIGE PLAYLIST","Essa música foi uma indireta?|Was that song a hint?|¿Esa canción fue una indirecta?|War dieser Song eine Andeutung?","🎧","O Caio criou uma playlist chamada “Para alguém que nunca percebe”, e a turma já montou uma lista de suspeitas. Dizem que a inspiração é a Luna, mas o gosto musical dele é tão ruim que ninguém sabe se é declaração ou castigo.\nSe a Luna ouvir até o fim, merece um prêmio de paciência.|Caio made a playlist called “For Someone Who Never Notices,” and the class has already drawn up a suspect list. They say Luna is the inspiration, but his taste in music is so bad nobody knows if it's a confession or a punishment.\nIf Luna listens to the end, she deserves a patience award.|Caio creó una playlist llamada «Para alguien que nunca se da cuenta» y la clase ya armó una lista de sospechosas. Dicen que la inspiración es Luna, pero su gusto musical es tan malo que nadie sabe si es una declaración o un castigo.\nSi Luna la escucha hasta el final, merece un premio a la paciencia.|Caio hat eine Playlist namens „Für jemanden, der es nie merkt“ erstellt, und die Klasse hat schon eine Verdächtigenliste. Angeblich ist Luna die Inspiration, aber sein Musikgeschmack ist so schlecht, dass keiner weiß, ob es ein Geständnis oder eine Strafe ist.\nWenn Luna bis zum Ende zuhört, verdient sie einen Geduldspreis."],
+["PLANOS SECRETOS|SECRET PLANS|PLANES SECRETOS|GEHEIME PLÄNE","Todo mundo foi convidado… menos uma pessoa?|Everyone was invited… except one person?|¿Todos fueron invitados… menos una persona?|Alle wurden eingeladen… nur eine Person nicht?","🎟️","A Jade organizou um passeio no sábado e “esqueceu” de chamar a Duda. Dizem que foi de propósito, porque a Duda disse que a festa dela era chata.\nA Duda jura que vai aparecer de qualquer jeito. Prepare a pipoca.|Jade organized a Saturday outing and “forgot” to invite Duda. They say it was on purpose, because Duda said her party was boring.\nDuda swears she'll show up anyway. Grab the popcorn.|Jade organizó una salida el sábado y «se olvidó» de invitar a Duda. Dicen que fue a propósito, porque Duda dijo que su fiesta era aburrida.\nDuda jura que va a aparecer de todos modos. Prepara las palomitas.|Jade hat für Samstag einen Ausflug organisiert und „vergessen“, Duda einzuladen. Angeblich war es Absicht, weil Duda ihre Party langweilig genannt hatte.\nDuda schwört, sie taucht trotzdem auf. Holt schon mal das Popcorn."],
+["EX-CRUSH ALERT|EX-CRUSH ALERT|EX-CRUSH ALERT|EX-CRUSH ALERT","Superou mesmo ou só mudou de estratégia?|Really over it, or just a new strategy?|¿Lo superó o solo cambió de estrategia?|Wirklich drüber weg oder nur neue Strategie?","💔","A Mel diz que superou o ex, mas foi vista perguntando para metade da escola quem é a nova paixão dele. Fontes garantem que ela até stalkeou a lista de seguidores às duas da manhã.\nSuperou nada, a Mel é a rainha da fingição.|Mel says she's over her ex, yet she was seen asking half the school who his new crush is. Sources swear she even stalked his followers list at two in the morning.\nShe's not over anything, Mel is the queen of pretending.|Mel dice que superó a su ex, pero la vieron preguntándole a medio colegio quién es su nueva ilusión. Fuentes aseguran que hasta stalkeó su lista de seguidores a las dos de la madrugada.\nQué va a haberlo superado, Mel es la reina del fingimiento.|Mel sagt, sie sei über ihren Ex hinweg, wurde aber dabei gesehen, wie sie die halbe Schule fragte, wer seine neue Flamme ist. Quellen schwören, sie habe sogar um zwei Uhr nachts seine Followerliste durchstöbert.\nÜberhaupt nicht drüber weg, Mel ist die Königin des Vortäuschens."],
+["PLOT TWIST|PLOT TWIST|PLOT TWIST|PLOT TWIST","Era TUDO mentira?|Was it ALL a lie?|¿Era TODO mentira?|War ALLES gelogen?","🕵️","A aluna nova, a Aysha, contou que já morou em três países, mas a história muda a cada vez: a escola, a cidade, até o motivo da mudança. Dizem que ela nunca saiu da cidade e inventa tudo para parecer interessante.\nQuem acredita nessa mentirosa ainda acredita em Papai Noel.|The new student, Aysha, said she's lived in three countries, but the story changes every time: the school, the city, even the reason she moved. They say she's never left town and makes it all up to seem interesting.\nAnyone who believes that liar still believes in Santa Claus.|La alumna nueva, Aysha, contó que vivió en tres países, pero la historia cambia cada vez: el colegio, la ciudad, hasta el motivo de la mudanza. Dicen que nunca salió de la ciudad y lo inventa todo para parecer interesante.\nQuien le cree a esa mentirosa todavía cree en Papá Noel.|Die Neue, Aysha, erzählte, sie habe in drei Ländern gelebt, aber die Geschichte ändert sich jedes Mal: Schule, Stadt, sogar der Umzugsgrund. Angeblich war sie nie aus der Stadt raus und erfindet alles, um interessant zu wirken.\nWer dieser Lügnerin glaubt, glaubt auch noch an den Weihnachtsmann."],
+["O GRANDE MISTÉRIO|THE GREAT MYSTERY|EL GRAN MISTERIO|DAS GROSSE RÄTSEL","Quem sou eu? Vocês nunca vão descobrir|Who am I? You'll never find out|¿Quién soy? Nunca lo descubrirán|Wer ich bin? Das findet ihr nie heraus","👁️","Eu vejo tudo. Sei quem colou na prova, quem apagou a mensagem e quem fingiu que estava tudo bem. E sim, eu leio os comentários me chamando de mentirosa, só podem ser os invejosos de sempre.\nVocês me procuram por aí, mas eu estou sentada na mesma sala que vocês. Vocês ainda não sabem de tudo.|I see everything. I know who cheated on the test, who deleted the message and who pretended everything was fine. And yes, I read the comments calling me a liar, it must be the usual jealous crowd.\nYou're looking for me out there, but I'm sitting in the same room as you. You still don't know everything.|Yo lo veo todo. Sé quién copió en el examen, quién borró el mensaje y quién fingió que todo estaba bien. Y sí, leo los comentarios que me llaman mentirosa, deben de ser los envidiosos de siempre.\nMe buscan por ahí, pero estoy sentada en la misma sala que ustedes. Todavía no lo saben todo.|Ich sehe alles. Ich weiß, wer in der Klausur abgeschrieben, wer die Nachricht gelöscht und wer so getan hat, als wäre alles gut. Und ja, ich lese die Kommentare, die mich Lügnerin nennen, das sind bestimmt die üblichen Neider.\nIhr sucht mich da draußen, aber ich sitze im selben Raum wie ihr. Ihr wisst noch lange nicht alles."]
+];
+const $=s=>document.querySelector(s),LI=["pt","en","es","de"];
+let lang="pt",lvl=matchMedia("(prefers-reduced-motion:reduce)").matches?1:4,io;
+
+function render(){
+  const t=I[lang],k=LI.indexOf(lang);
+  document.documentElement.lang={pt:"pt-BR",en:"en",es:"es",de:"de"}[lang];
+  $("#slogan").textContent=t.slogan;$("#last").textContent=t.last;
+  $("#llang").textContent=t.lang+":";$("#lanim").textContent=t.anim+":";
+  $("#quote").textContent=t.q;$("#sig").textContent=t.sig;$("#foot").textContent=t.foot;
+  $("#lv").innerHTML=t.lv.map((n,i)=>`<option value="${i+1}"${i+1===lvl?" selected":""}>${n}</option>`).join("");
+  document.querySelectorAll(".lg button").forEach(b=>b.setAttribute("aria-pressed",b.dataset.l===lang));
+  const heads=S.map(s=>s[1].split("|")[k]+" "+s[2]);
+  $("#rail").textContent=heads.join("   💋   ");
+  $("#grid").innerHTML=S.map((s,i)=>{
+    const p=s[3].split("|")[k].split("\n");
+    return `<article class="card pre"><div class="n">${String(i+1).padStart(2,"0")}</div><button class="hd" aria-expanded="false" aria-controls="b${i}"><span class="tag">${s[0].split("|")[k]}</span><span class="h2">${s[1].split("|")[k]} ${s[2]}</span><span class="chev" aria-hidden="true">▾</span></button><div class="bd" id="b${i}"><div class="bd-in"><p>${p[0]}</p><p class="q">${p[1]}</p></div></div></article>`;
+  }).join("");
+  observe();
+}
+function observe(){
+  if(io)io.disconnect();
+  io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target)}}),{threshold:.08});
+  document.querySelectorAll(".card").forEach(c=>io.observe(c));
+}
+/* brilho no logo */
+const logo=document.querySelector(".logo");
+for(let i=0;i<14;i++){const s=document.createElement("span");s.className="sp";s.textContent="✦";
+  s.style.cssText=`left:${Math.random()*100}%;top:${Math.random()*100}%;font-size:${10+Math.random()*16}px;animation-delay:${(Math.random()*2).toFixed(2)}s`;logo.appendChild(s)}
+const setSp=()=>document.querySelectorAll(".sp").forEach((s,i)=>s.style.display=lvl>1&&i<[0,4,8,12,14][lvl-1]?"":"none");
+/* glitter em tela cheia */
+const cv=$("#fx"),cx=cv.getContext("2d"),CNT=[0,10,25,55,110],SPD=[0,.35,.6,1,1.8],COL=["#fff","#ffd86b","#ff2d95","#b36bff","#7fd8ff"];
+let W,H,P=[],T=[];
+function size(){W=cv.width=innerWidth;H=cv.height=innerHeight}
+const mk=()=>({x:Math.random()*W,y:Math.random()*H,r:Math.random()*2.6+1,vx:(Math.random()-.5)*.4,vy:-(Math.random()*.5+.15),p:Math.random()*6.28,c:COL[Math.random()*5|0]});
+function star(x,y,r){cx.beginPath();cx.moveTo(x,y-r*2);cx.quadraticCurveTo(x,y,x+r*2,y);cx.quadraticCurveTo(x,y,x,y+r*2);cx.quadraticCurveTo(x,y,x-r*2,y);cx.quadraticCurveTo(x,y,x,y-r*2);cx.fill()}
+function loop(){
+  cx.clearRect(0,0,W,H);const s=SPD[lvl-1];
+  for(const q of P){q.x+=q.vx*s;q.y+=q.vy*s;q.p+=.05*s;if(q.y<-10){q.y=H+10;q.x=Math.random()*W}
+    cx.globalAlpha=.35+.65*Math.abs(Math.sin(q.p));cx.fillStyle=q.c;star(q.x,q.y,q.r)}
+  T=T.filter(q=>q.l>0);
+  for(const q of T){q.x+=q.vx;q.y+=q.vy;q.vy+=.04;q.l--;cx.globalAlpha=q.l/40;cx.fillStyle=q.c;star(q.x,q.y,q.r)}
+  requestAnimationFrame(loop);
+}
+addEventListener("resize",size);
+addEventListener("pointermove",e=>{
+  if(lvl>=4)for(let i=0;i<(lvl===5?3:1);i++)T.push({x:e.clientX,y:e.clientY,vx:(Math.random()-.5)*2,vy:Math.random()*-1.5,r:Math.random()*2+1,l:40,c:COL[Math.random()*5|0]});
+  if(lvl===5){const c=e.target.closest&&e.target.closest(".card");
+    if(c){const b=c.getBoundingClientRect();c.style.setProperty("--ry",((e.clientX-b.left)/b.width-.5)*10+"deg");c.style.setProperty("--rx",(.5-(e.clientY-b.top)/b.height)*10+"deg")}}
+});
+document.addEventListener("pointerout",e=>{const c=e.target.closest&&e.target.closest(".card");if(c){c.style.setProperty("--rx","0deg");c.style.setProperty("--ry","0deg")}});
+function setLvl(n){lvl=n;document.documentElement.dataset.lvl=n;P=Array.from({length:CNT[n-1]},mk);setSp()}
+document.querySelectorAll(".lg button").forEach(b=>b.onclick=()=>{lang=b.dataset.l;render()});
+$("#lv").onchange=e=>setLvl(+e.target.value);
+$("#grid").addEventListener("click",e=>{const b=e.target.closest(".hd");if(!b)return;const c=b.parentElement,o=c.classList.toggle("open");b.setAttribute("aria-expanded",o)});
+size();render();setLvl(lvl);loop();
+</script>
+</body>
+</html>
